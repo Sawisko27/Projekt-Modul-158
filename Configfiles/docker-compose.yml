@@ -1,0 +1,55 @@
+version: '3.8'
+ 
+services:
+  moodle:
+    build: .
+    container_name: migration-moodle
+    ports:
+      - "80:80"
+    volumes:
+      - ./moodledata:/var/www/moodledata
+      - ./config.php:/var/www/html/config.php    # Optional, wenn du eine eigene config.php nutzen willst
+    depends_on:
+      - mariadb
+    environment:
+      - MOODLE_DB_HOST=mariadb
+      - MOODLE_DB_USER=moodle
+      - MOODLE_DB_PASSWORD=deinpasswort
+      - MOODLE_DB_NAME=moodle
+    networks:
+      - moodlenet
+ 
+  mariadb:
+    image: mariadb:latest  # empfehlenswerte stabile Version
+    container_name: mariadb
+    restart: always
+    environment:
+      - MARIADB_ROOT_PASSWORD=rootpass
+      - MARIADB_DATABASE=moodle
+      - MARIADB_USER=moodle
+      - MARIADB_PASSWORD=deinpasswort
+    volumes:
+      - ./db_data:/var/lib/mysql
+    networks:
+      - moodlenet
+ 
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    ports:
+      - "8081:80"
+    environment:
+      - PMA_HOST=mariadb
+      # - PMA_PORT=3306   # Kann man angeben, ist aber nicht zwingend nötig
+    depends_on:
+      - mariadb
+    networks:
+      - moodlenet
+ 
+volumes:
+  db_data:
+  moodledata:
+ 
+networks:
+  moodlenet:
