@@ -55,7 +55,7 @@ cp -r /pfad/zur/alten/moodledata ./moodledata
 ### 📦 3.1 Moodle 4.1.2 Umgebung starten
 ```
 cd ..
-cp Configfiles/Dockerfiles/Dockerfile1 Dockerfile
+cp Configfiles/Dockerfiles/Dockerfile1 Configfiles/Dockerfile
 ```
 Dateiberechtigungen setzen:
 ```
@@ -118,7 +118,7 @@ docker compose down -v
 ```
 Und dann weiterforfahren:
 ```
-cp Configfiles/Dockerfile2 Dockerfile
+cp Configfiles/Dockerfiles/Dockerfile2 Configfiles/Dockerfile
 docker compose up --build -d
 ```
 Danach im Browser wieder `http://localhost:80` aufrufen und die Datenbankmigration wie bei Schritt 5 durchführen.
@@ -126,7 +126,7 @@ Danach im Browser wieder `http://localhost:80` aufrufen und die Datenbankmigrati
 Wie vorhin, die folgenden drei Befehle durchführen:
 ```
 docker compose down -v
-cp Configfiles/Dockerfile3 Dockerfile
+cp Configfiles/Dockerfiles/Dockerfile3 Configfiles/Dockerfile
 docker compose up --build -d
 ```
 Und das ganze wieder im Browser upgraden.
