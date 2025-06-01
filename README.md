@@ -59,6 +59,7 @@ cp Configfiles/Dockerfiles/Dockerfile1 Dockerfile
 ```
 Dateiberechtigungen setzen:
 ```
+cd ./Configfiles
 sudo chown -R 33:33 moodledata
 sudo chmod -R 755 moodledata
 ```
