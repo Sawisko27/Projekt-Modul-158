@@ -1,4 +1,4 @@
-# 📘Projekt-Modul-158 Anleitung:Moodle mit Docker lokal ausführen
+# 📘Projekt-Modul-158 Anleitung: Moodle und Docker
 -----------------------------------------------
 Dieses Repository dokumentiert Schritt für Schritt, wie eine bestehende Moodle 3.10.11 Instanz in eine moderne, containerisierte Umgebung überführt und anschliessend auf Moodle 5.0 aktualisiert wird.  
 * * * * *
