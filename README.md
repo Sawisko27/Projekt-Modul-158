@@ -20,6 +20,7 @@ Die Verzeichnisstruktur des Projektes soll wie folgt aussehen:
       - **Dockerfile1**: Erste Konfigurationsdatei für Moodle Version 4.1.2
       - **Dockerfile2**: Zweite Konfigurationsdatei für Moodle Version 4.2.3
       - **Dockerfile3**: Dritte Konfigurationsdatei für Moodle Version 5.0
+    - **backup_moodle.sh**: Datei für das Backup
     - **config.php**: Hauptkonfigurationsdatei für das Projekt.
     - **docker-compose.yml**: Datei zur Definition und Ausführung von Docker-Containern.
   - **README.md**: Diese Anleitung.
