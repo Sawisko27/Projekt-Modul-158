@@ -54,7 +54,8 @@ cp -r /pfad/zur/alten/moodledata ./moodledata
 -----------------------------------
 ### 📦 3.1 Moodle 4.1.2 Umgebung starten
 ```
-cp Configfiles/Dockerfile1 Dockerfile
+cd ..
+cp Configfiles/Dockerfiles/Dockerfile1 Dockerfile
 ```
 Dateiberechtigungen setzen:
 ```
