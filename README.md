@@ -37,6 +37,7 @@ cd Projekt-Modul-158
 -------------------------------------------
 Bevor irgendetwas migriert oder aktualisiert wird, erstellen wir ein Backup der bestehenden Moodle 3.10.11 Datenbank mit der backup_moodle.sh Datei:
 ```
+cd ./Configfiles
 chmod +x backup_moodle.sh
 ./backup_moodle.sh
 ```
